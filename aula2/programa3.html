@@ -1,0 +1,18 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+//passa o evento quando clica no navegador
+    function exibeAlerta(evento) {
+//parametro evento tem as coordenadas da posição do mouse
+        alert('Cliquei');  
+        console.log(evento);
+         
+    }
+// guarda a função exibe alerta
+    tela.onclick = exibeAlerta;
+</script>
